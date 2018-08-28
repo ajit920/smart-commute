@@ -1,0 +1,36 @@
+<ion-view view-title="Find your commute">
+    <ion-content>
+
+        <form>
+            <div class="list">
+                <a class="item item-icon-left" href="#/app/browse">
+                    <i class="icon ion-location"></i>  {{ searchData.Current ? 'Change' : 'Find'}} my Location
+                </a>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Current Location</span>
+                    <input type="text" placeholder="Current Location" ng-model="searchData.Current">
+
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Destination</span>
+                    <input type="text" placeholder="Destination" ng-model="searchData.Destination">
+                </label>
+                <!--<label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="text" placeholder="Email">
+                </label>-->
+            </div>
+            <ion-list title="Choose Mode">
+                <ion-radio ng-model="choice" ng-value="'All'">All</ion-radio>
+                <ion-radio ng-model="choice" ng-value="'Bus'">Bus</ion-radio>
+                <ion-radio ng-model="choice" ng-value="'Metro'">Metro</ion-radio>
+                <!--<ion-radio ng-model="choice" ng-value="'Train'">Train</ion-radio>-->
+            </ion-list>
+
+            <a class="button button-block button-positive icon-left ion-search" href="#/app/booking">Search</a>
+
+        </form>
+
+    </ion-content>
+
+</ion-view>

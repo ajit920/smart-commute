@@ -1,0 +1,12 @@
+<ion-view view-title="Location">
+   
+    <ion-content>
+       <label > Cannot find your location .. Turn on your gps and try again. Or Chooses any one the cities below</label>
+        <ion-list>
+           
+            <ion-item ng-repeat="city in cities" href="#/app/search/{{city.title}}">
+                {{city.title}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
